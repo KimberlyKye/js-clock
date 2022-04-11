@@ -36,72 +36,61 @@ body {
     z-index: 111;
   }
 
-  .hour {
-    position: absolute;
-
-    .hours {
-      width: 110px;
-      height: 110px;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      border-radius: 50%;
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 8px;
-        height: 50px;
-        background: #7e0707;
-        z-index: 10;
-        border-radius: 2px 2px 0 0;
-      }
-    }
-  }
-
-  .minute {
-    position: absolute;
-
-    .minutes {
-      width: 170px;
-      height: 170px;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      border-radius: 50%;
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 4px;
-        height: 80px;
-        background: #c76464;
-        z-index: 11;
-        border-radius: 1px 1px 0 0;
-      }
-    }
-  }
-
+  .hour,
+  .minute,
   .second {
     position: absolute;
+  }
 
-    .seconds {
-      width: 210px;
-      height: 210px;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      border-radius: 50%;
+  .hours,
+  .minutes,
+  .seconds {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+  }
+  .hours {
+    width: 110px;
+    height: 110px;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 50px;
+      background: #7e0707;
+      z-index: 10;
+      border-radius: 2px 2px 0 0;
+    }
+  }
 
-      &::before {
-        content: '';
-        position: absolute;
-        width: 2px;
-        height: 130px;
-        background: #000000;
-        z-index: 12;
-        border-radius: 2px 2px 0 0;
-      }
+  .minutes {
+    width: 170px;
+    height: 170px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 80px;
+      background: #c76464;
+      z-index: 11;
+      border-radius: 1px 1px 0 0;
+    }
+  }
+
+  .seconds {
+    width: 210px;
+    height: 210px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 130px;
+      background: #000000;
+      z-index: 12;
+      border-radius: 2px 2px 0 0;
     }
   }
 }
